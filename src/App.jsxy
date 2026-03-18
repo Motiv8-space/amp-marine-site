@@ -1,0 +1,308 @@
+import { motion } from "framer-motion";
+import { Phone, Mail, ArrowRight } from "lucide-react";
+
+export default function AmpMarineWebsite() {
+  const services = [
+  // services unchanged
+
+    {
+      title: "Marine Electrical Diagnostics",
+      description:
+        "Comprehensive troubleshooting for intermittent faults, charging issues, battery banks, and onboard electrical systems.",
+    },
+    {
+      title: "Electronics Installation",
+      description:
+        "Professional installation of chartplotters, radar, autopilots, sonar, VHF, AIS, and integrated helm electronics.",
+    },
+    {
+      title: "Lithium & Charging Upgrades",
+      description:
+        "Modern battery, inverter, solar, and charging system upgrades designed for reliability, safety, and performance.",
+    },
+    {
+      title: "Custom Rewires & Refits",
+      description:
+        "Clean, labeled, serviceable wiring solutions for new builds, refits, and high-end marine electrical modernization.",
+    },
+  ];
+
+  const projects = [
+  { src: "/projects/20240708_135648.jpg", title: "Helm Panel (Before)", desc: "Legacy analog helm layout prior to modernization." },
+  { src: "/projects/20241210_131645.jpg", title: "Helm Electronics Upgrade", desc: "Integrated display and switch panel with improved control and visibility." },
+  { src: "/projects/20240710_161402.jpg", title: "Engine Bay Integration", desc: "Clean routing and secured runs for long-term reliability." },
+  { src: "/projects/20241125_120140.jpg", title: "Power Distribution Upgrade", desc: "Marine-grade components with organized, protected circuits." },
+  { src: "/projects/20241125_120217.jpg", title: "Battery & Charging System", desc: "Optimized charging layout and protected wiring paths." },
+  { src: "/projects/20241126_162015.jpg", title: "Cable Management", desc: "Bundled, labeled harnessing for serviceability and durability." },
+  { src: "/projects/20241118_122950.jpg", title: "Panel Rewire", desc: "Clean rewire replacing failure-prone connections." },
+  { src: "/projects/20241112_111215.jpg", title: "System Integration", desc: "Electronics and power systems unified for reliable operation." },
+  { src: "/projects/20250214_135207.jpg", title: "High-Load Circuit Build", desc: "Properly sized conductors and protection for demanding loads." },
+  { src: "/projects/20250221_132223.jpg", title: "Charging & Distribution", desc: "Balanced distribution and tidy routing across compartments." },
+  { src: "/projects/20250228_083613.jpg", title: "Serviceable Layout", desc: "Accessible components with clear labeling for future service." },
+  { src: "/projects/20250302_174621.jpg", title: "Helm Modernization", desc: "Refined helm layout with upgraded controls and displays." },
+  { src: "/projects/20250304_172804.jpg", title: "Electrical Refit", desc: "Full-system refit emphasizing cleanliness and reliability." },
+  { src: "/projects/20250305_112042.jpg", title: "Clean Fuse & Bus Layout", desc: "Organized fuse block and bus bars with labeled circuits." },
+  { src: "/projects/20250305_130735.jpg", title: "Switch Panel Integration", desc: "Backlit switch panel with intuitive control layout." },
+  { src: "/projects/20250305_130727.jpg", title: "Helm Controls Detail", desc: "High-visibility, labeled switching for confident operation." },
+  { src: "/projects/IMG_0722.jpg", title: "Wiring (Before)", desc: "Unorganized wiring prior to refit." },
+  { src: "/projects/IMG_0779.jpg", title: "Wiring (After)", desc: "Clean harnessing, secured runs, and professional labeling." },
+  { src: "/projects/IMG_20250304_182005.jpg", title: "Finished Install Detail", desc: "Tidy final install with protected runs and clean routing." },
+  { src: "/projects/Mike’s Boat Wiring Final.png", title: "System Design & Planning", desc: "Detailed electrical mapping for reliability and future service access." },
+];
+
+return (
+    <div className="min-h-screen overflow-x-hidden bg-[#061c1c] text-white">
+      <motion.div
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0 }}
+        transition={{ duration: 1.2, delay: 2.1, ease: "easeInOut" }}
+        className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#041616]"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92, y: 18 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: "easeOut" }}
+          className="relative text-center"
+        >
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0.7 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 1.2, delay: 0.35 }}
+            className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-amber-300/60 to-transparent"
+          />
+          <motion.img
+            src="/logo.png"
+            alt="Amp Marine Logo"
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.1, delay: 0.15 }}
+            className="relative mx-auto w-56 drop-shadow-[0_0_40px_rgba(255,215,150,0.22)] sm:w-72"
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.85 }}
+            className="mt-6 text-xs uppercase tracking-[0.45em] text-amber-200/85 sm:text-sm"
+          >
+            Orange County / SoCal Marine Specialist
+          </motion.p>
+        </motion.div>
+      </motion.div>
+
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#061c1c]/80 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-3">
+            <picture>
+              <source srcSet="/logo.svg" type="image/svg+xml" />
+              <img
+                src="/logo.png"
+                alt="Amp Marine Logo"
+                className="h-12 w-auto"
+              />
+            </picture>
+          </div>
+          <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+            <a href="#services" className="transition hover:text-white">Services</a>
+            <a href="#contact" className="transition hover:text-white">Contact</a>
+            <a
+              href="https://www.ampmarine.net"
+              target="_blank"
+              rel="noreferrer"
+              className="text-amber-300 transition hover:text-white"
+            >
+              ampmarine.net
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,214,153,0.08),transparent_35%),linear-gradient(to_bottom,transparent,rgba(0,0,0,0.6))]" />
+
+        <div className="relative mx-auto max-w-6xl px-6 py-24 text-center sm:py-28">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+          >
+            <picture>
+              <source srcSet="/logo.svg" type="image/svg+xml" />
+              <img
+                src="/logo.png"
+                alt="Amp Marine Logo"
+                className="mx-auto mb-8 w-48 drop-shadow-[0_0_30px_rgba(255,215,150,0.25)] sm:w-56"
+              />
+            </picture>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="text-sm uppercase tracking-[0.35em] text-amber-300"
+          >
+            Orange County / SoCal Marine Specialist
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.6 }}
+            className="mx-auto mt-5 max-w-4xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
+          >
+            Marine Electrical Systems Built for Reliability
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.8 }}
+            className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300"
+          >
+            Precision craftsmanship, high-end electronics integration, and
+            uncompromising reliability for discerning vessel owners.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-amber-300 to-amber-500 px-6 py-3 text-sm font-medium text-black shadow-lg transition hover:scale-[1.02]"
+            >
+              Request Consultation <ArrowRight className="h-4 w-4" />
+            </a>
+
+            <a
+              href="tel:+1-949-777-5102"
+              className="inline-flex items-center gap-2 rounded-2xl border border-amber-400/40 px-6 py-3 text-sm font-medium text-amber-200 transition hover:bg-white/5"
+            >
+              <Phone className="h-4 w-4" /> Tap to Call
+            </a>
+
+            <a
+              href="mailto:info@ampmarine.net"
+              className="inline-flex items-center gap-2 rounded-2xl border border-white/10 px-6 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/5"
+            >
+              <Mail className="h-4 w-4" /> Email Us
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      <section id="services" className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm uppercase tracking-[0.3em] text-amber-300">Services</p>
+          <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
+            Premium Marine Electrical Solutions
+          </h2>
+          <p className="mt-4 text-slate-400">
+            Designed for performance, built for longevity, and executed with
+            exceptional attention to detail.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
+              className="rounded-3xl border border-white/10 bg-[#0b2222] p-8 shadow-xl transition hover:border-amber-400/40"
+            >
+              <h3 className="text-xl font-semibold text-amber-200">
+                {service.title}
+              </h3>
+              <p className="mt-4 leading-7 text-slate-300">
+                {service.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="text-sm uppercase tracking-[0.3em] text-amber-300">Recent Projects</p>
+          <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">Craftsmanship You Can See</h2>
+          <p className="mt-4 text-slate-400">Real installations showcasing precision, cleanliness, and reliability.</p>
+        </div>
+
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.05 }}
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b2222]"
+            >
+              <img src={p.src} className="h-56 w-full object-cover group-hover:scale-105 transition" />
+              <div className="p-5">
+                <h3 className="text-lg text-amber-200 font-semibold">{p.title}</h3>
+                <p className="mt-2 text-sm text-slate-400">{p.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-6xl px-6 pb-24">
+        <div className="rounded-[2rem] border border-white/10 bg-[#0b2222] p-10 text-center shadow-2xl">
+          <h2 className="text-3xl font-semibold">Start Your Next Project</h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-slate-300">
+            Contact us to discuss your vessel, upgrades, or troubleshooting needs.
+            Serving Orange County and Southern California with premium marine
+            electrical solutions.
+          </p>
+
+          <div className="mt-8 flex flex-col items-center gap-4">
+            <a
+              href="mailto:info@ampmarine.net"
+              className="text-lg text-amber-300 transition hover:text-white"
+            >
+              info@ampmarine.net
+            </a>
+
+            <a
+              href="tel:+1-949-777-5102"
+              className="inline-flex items-center gap-2 rounded-2xl border border-amber-400/30 px-5 py-3 text-amber-200 transition hover:bg-white/5"
+            >
+              <Phone className="h-4 w-4" /> Call Now
+            </a>
+
+            <a
+              href="https://www.ampmarine.net"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 transition hover:text-white"
+            >
+              www.ampmarine.net
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 py-6 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} Amp Marine Electrical Solutions — All rights reserved
+      </footer>
+
+      {/* STICKY CALL BUTTON (MOBILE HIGH CONVERSION) */}
+      <a
+        href="tel:+1-949-777-5102"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-300 to-amber-500 px-5 py-3 text-sm font-semibold text-black shadow-2xl transition hover:scale-105 md:hidden"
+      >
+        <Phone className="h-4 w-4" /> Call Now
+      </a>
+    </div>
+  );
+}
+
