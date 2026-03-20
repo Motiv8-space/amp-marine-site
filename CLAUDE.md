@@ -75,6 +75,10 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 21)
+- Navbar inner div: removed `mx-auto max-w-7xl` → `flex w-full` so "Amp Marine" is flush left
+- Bolt glow: outer `left-[27%] top-[15%]`, inner `left-[27.5%] top-[15.5%]`
+
 ### 2026-03-20 (session 20)
 - Restored `<img>` tag hero approach: `h-[72vh] object-cover object-center block`
 - Splash screen: backgroundImage preview.jpg retained
