@@ -68,7 +68,7 @@ return (
 
       {/* Navbar */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#061c1c]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <div className="flex w-full items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
             <a href="tel:+1-949-777-5102" className="font-semibold tracking-wide text-amber-300 transition hover:text-white">
               Amp Marine
@@ -96,14 +96,14 @@ return (
 
           {/* Bolt glow — outer */}
           <motion.div
-            className="pointer-events-none absolute left-[25%] top-[18%] h-32 w-32 blur-3xl"
+            className="pointer-events-none absolute left-[27%] top-[15%] h-32 w-32 blur-3xl"
             style={{ background: "radial-gradient(circle, rgba(56,189,248,0.7), transparent 70%)" }}
             animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.2, 0.9] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
           />
           {/* Bolt glow — inner */}
           <motion.div
-            className="pointer-events-none absolute left-[25.5%] top-[18.5%] h-16 w-16 blur-xl"
+            className="pointer-events-none absolute left-[27.5%] top-[15.5%] h-16 w-16 blur-xl"
             style={{ background: "radial-gradient(circle, rgba(125,211,252,0.9), transparent 70%)" }}
             animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.15, 0.95] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}

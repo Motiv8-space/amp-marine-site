@@ -75,6 +75,14 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 20)
+- Restored `<img>` tag hero approach: `h-[72vh] object-cover object-center block`
+- Splash screen: backgroundImage preview.jpg retained
+- Navbar: "Amp Marine" amber text link (tel:) on left, nav links on right including phone number
+- Bolt glow: outer `left-[25%] top-[18%]`, inner `left-[25.5%] top-[18.5%]`
+- Hero structure: img on top → CTA buttons (`-mt-6`) → text block below
+- Image container: `relative w-full overflow-hidden`, no rounded corners
+
 ### 2026-03-20 (session 19)
 - Restored splash screen `backgroundImage: url('/preview.jpg')` style
 - Reverted hero from `<img>` tag approach back to CSS background image on `<section>`:
