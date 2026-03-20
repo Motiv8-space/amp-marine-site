@@ -35,6 +35,7 @@ export default function AmpMarineWebsite() {
 
 return (
     <div className="w-screen min-h-screen overflow-x-hidden bg-[#061c1c] text-white">
+      {/* Splash screen */}
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
@@ -65,42 +66,79 @@ return (
         </motion.div>
       </motion.div>
 
+      {/* Navbar */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#061c1c]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3"></div>
+          <div className="flex items-center gap-3">
+            <a href="tel:+1-949-777-5102" className="font-semibold tracking-wide text-amber-300 transition hover:text-white">
+              Amp Marine
+            </a>
+          </div>
           <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
             <a href="#services" className="transition hover:text-white">Services</a>
             <a href="#contact" className="transition hover:text-white">Contact</a>
-            <a href="tel:+1-949-777-5102" className="font-semibold tracking-wide text-amber-300 transition hover:text-white">
-              Amp Marine
+            <a href="tel:+1-949-777-5102" className="transition hover:text-white">
+              (949) 777-5102
             </a>
           </div>
         </div>
       </header>
 
-      <section className="relative min-h-[60vh] sm:min-h-[68vh]">
-        {/* Background image */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/preview.jpg')" }} />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/35" />
+      {/* Hero — image on top, text below, buttons bridging */}
+      <section className="relative">
+        <div className="relative w-full overflow-hidden">
+          <img
+            src="/preview.jpg"
+            alt="Amp Marine electrical work"
+            className="w-full h-[72vh] object-cover object-center block"
+          />
+          <div className="absolute inset-0 bg-black/20" />
 
-        {/* Bolt glow — outer */}
-        <motion.div
-          className="pointer-events-none absolute left-[17%] top-[22%] h-32 w-32 blur-3xl"
-          style={{ background: "radial-gradient(circle, rgba(56,189,248,0.7), transparent 70%)" }}
-          animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.2, 0.9] }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-        />
-        {/* Bolt glow — inner */}
-        <motion.div
-          className="pointer-events-none absolute left-[17.5%] top-[22.5%] h-16 w-16 blur-xl"
-          style={{ background: "radial-gradient(circle, rgba(125,211,252,0.9), transparent 70%)" }}
-          animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.15, 0.95] }}
-          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-        />
+          {/* Bolt glow — outer */}
+          <motion.div
+            className="pointer-events-none absolute left-[25%] top-[18%] h-32 w-32 blur-3xl"
+            style={{ background: "radial-gradient(circle, rgba(56,189,248,0.7), transparent 70%)" }}
+            animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.2, 0.9] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          />
+          {/* Bolt glow — inner */}
+          <motion.div
+            className="pointer-events-none absolute left-[25.5%] top-[18.5%] h-16 w-16 blur-xl"
+            style={{ background: "radial-gradient(circle, rgba(125,211,252,0.9), transparent 70%)" }}
+            animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.15, 0.95] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
 
-        {/* Content overlaid on background */}
-        <div className="relative mx-auto max-w-6xl px-6 py-24 text-center sm:py-28">
+        {/* CTA buttons — bridge image and text with negative margin */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="relative z-10 -mt-6 flex flex-col items-center justify-center gap-3 px-6 sm:flex-row"
+        >
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-amber-300 to-amber-500 px-6 py-3 text-sm font-medium text-black shadow-lg transition hover:scale-[1.02]"
+          >
+            Request Consultation <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href="tel:+1-949-777-5102"
+            className="inline-flex items-center gap-2 rounded-2xl border border-amber-400/40 bg-[#061c1c]/80 px-6 py-3 text-sm font-medium text-amber-200 backdrop-blur-sm transition hover:bg-white/10"
+          >
+            <Phone className="h-4 w-4" /> Tap to Call
+          </a>
+          <a
+            href="mailto:info@ampmarine.net"
+            className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-[#061c1c]/80 px-6 py-3 text-sm font-medium text-slate-200 backdrop-blur-sm transition hover:bg-white/10"
+          >
+            <Mail className="h-4 w-4" /> Email Us
+          </a>
+        </motion.div>
+
+        {/* Text block below image */}
+        <div className="mx-auto max-w-6xl px-6 pb-20 pt-10 text-center">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -127,32 +165,6 @@ return (
           >
             Precision craftsmanship, high-end electronics integration, and uncompromising reliability.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-amber-300 to-amber-500 px-6 py-3 text-sm font-medium text-black shadow-lg transition hover:scale-[1.02]"
-            >
-              Request Consultation <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="tel:+1-949-777-5102"
-              className="inline-flex items-center gap-2 rounded-2xl border border-amber-400/40 px-6 py-3 text-sm font-medium text-amber-200 transition hover:bg-white/5"
-            >
-              <Phone className="h-4 w-4" /> Tap to Call
-            </a>
-            <a
-              href="mailto:info@ampmarine.net"
-              className="inline-flex items-center gap-2 rounded-2xl border border-white/10 px-6 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/5"
-            >
-              <Mail className="h-4 w-4" /> Email Us
-            </a>
-          </motion.div>
         </div>
       </section>
 

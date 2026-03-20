@@ -75,6 +75,16 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 19)
+- Restored splash screen `backgroundImage: url('/preview.jpg')` style
+- Reverted hero from `<img>` tag approach back to CSS background image on `<section>`:
+  - `<section className="relative min-h-[60vh] sm:min-h-[68vh]">`
+  - Background div: `absolute inset-0 bg-cover bg-center` with inline backgroundImage style
+  - Overlay div: `absolute inset-0 bg-black/35`
+  - Text + CTAs overlaid via `relative` content div (py-24)
+- Bolt glow restored to `left-[17%] top-[22%]` (outer) and `left-[17.5%] top-[22.5%]` (inner)
+- No rounded corners on hero section
+
 ### 2026-03-20 (session 18)
 - Hero image height: `h-[62vh]` → `h-[72vh]`
 - Confirmed no `rounded-*` on hero section, image wrapper div, or img
