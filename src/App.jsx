@@ -34,14 +34,14 @@ export default function AmpMarineWebsite() {
   ];
 
 return (
-    <div className="w-screen min-h-screen overflow-x-hidden bg-[#061c1c] text-white">
+    <div className="min-h-screen overflow-x-hidden bg-[#061c1c] text-white">
       {/* Splash screen */}
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ duration: 1.2, delay: 2.1, ease: "easeInOut" }}
         className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#061c1c]"
-        style={{ backgroundImage: "url('/preview.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "url('/preview.jpg')", backgroundSize: "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#061c1c" }}
       />
 
       {/* Navbar */}
@@ -74,14 +74,14 @@ return (
 
           {/* Bolt glow — outer */}
           <motion.div
-            className="pointer-events-none absolute left-[27%] top-[17%] h-32 w-32 blur-3xl"
+            className="pointer-events-none absolute left-[28%] top-[14%] h-32 w-32 blur-3xl"
             style={{ background: "radial-gradient(circle, rgba(56,189,248,0.7), transparent 70%)" }}
             animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.2, 0.9] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
           />
           {/* Bolt glow — inner */}
           <motion.div
-            className="pointer-events-none absolute left-[27.5%] top-[17.5%] h-16 w-16 blur-xl"
+            className="pointer-events-none absolute left-[28.5%] top-[14.5%] h-16 w-16 blur-xl"
             style={{ background: "radial-gradient(circle, rgba(125,211,252,0.9), transparent 70%)" }}
             animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.15, 0.95] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}

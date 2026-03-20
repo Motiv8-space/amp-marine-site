@@ -75,6 +75,9 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 24)
+- Bolt glow: outer `left-[27%] top-[17%]`, inner `left-[27.5%] top-[17.5%]`
+
 ### 2026-03-20 (session 23)
 - Copied new `mikes-boat-wiring-final.png` from Downloads (498 KB) — note: filename uses Unicode curly apostrophe, must use Python shutil to copy
 - Splash screen: removed all inner content (amber line, tagline text) — now just the `preview.jpg` background fading in/out, self-closing `motion.div`
