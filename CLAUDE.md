@@ -75,6 +75,21 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-19 (session 10)
+- `index.html`: confirmed bare `<div id="root">` — no wrapper padding
+- `index.css` body rule: added `padding: 0` and `overflow-x: hidden`
+- App.jsx outermost div: changed to `w-screen min-h-screen overflow-x-hidden`
+- Hero `<section>` and image container: both already `w-full` with no margin — confirmed clean
+
+### 2026-03-19 (session 9)
+- No logo.svg exists in public/ — kept logo.png in navbar, added `style={{ filter: 'brightness(0) invert(1)' }}` to render it white on the dark nav
+
+### 2026-03-19 (session 8)
+- Added `*.save` and `*.jsx.save` to `.gitignore`
+- Removed `src/App.jsx.save` from git index and disk (`git rm --cached`)
+- Hero image: added `block` to `<img>` className, added `w-full` to `<section>` and image container `<div>` to eliminate side gaps
+- Navbar: replaced `ampmarine.net` text link with `<img src="/logo.png" className="h-8 w-auto" />` wrapped in the same anchor
+
 ### 2026-03-19 (session 7)
 - Bolt glow moved up: both layers now `top-[8%]` (was `top-[14%]`)
 

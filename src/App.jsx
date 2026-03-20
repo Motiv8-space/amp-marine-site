@@ -34,7 +34,7 @@ export default function AmpMarineWebsite() {
   ];
 
 return (
-    <div className="min-h-screen overflow-x-hidden bg-[#061c1c] text-white">
+    <div className="w-screen min-h-screen overflow-x-hidden bg-[#061c1c] text-white">
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
@@ -71,8 +71,8 @@ return (
           <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
             <a href="#services" className="transition hover:text-white">Services</a>
             <a href="#contact" className="transition hover:text-white">Contact</a>
-            <a href="https://www.ampmarine.net" target="_blank" rel="noreferrer">
-              <img src="/logo.png" alt="Amp Marine" className="h-8 w-auto" />
+            <a href="tel:+1-949-777-5102">
+              <img src="/logo.png" alt="Amp Marine" className="h-8 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
             </a>
           </div>
         </div>
