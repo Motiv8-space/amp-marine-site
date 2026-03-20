@@ -75,6 +75,11 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 17)
+- Confirmed no `rounded-*` on hero section, image wrapper div, or img — already clean
+- Hero image height: `h-[55vh]` → `h-[62vh]`
+- Bolt glow: `top-[8%]` → `top-[12%]` on both layers
+
 ### 2026-03-19 (session 16)
 - Discovered `public/preview.jpg` (1200×800) had baked-in white/light borders: 29px left, 120px top, 38px right, 112px bottom (edge pixels ~RGB 241,241,241)
 - Auto-cropped borders using PIL with threshold=220; new size 1133×568

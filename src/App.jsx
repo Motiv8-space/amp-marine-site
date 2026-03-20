@@ -83,7 +83,7 @@ return (
           <img
             src="/preview.jpg"
             alt="Amp Marine electrical work"
-            className="w-full h-[62vh] object-cover object-top block"
+            className="w-full h-[72vh] object-cover object-top block"
           />
           {/* Subtle dark overlay */}
           <div className="absolute inset-0 bg-black/20" />
