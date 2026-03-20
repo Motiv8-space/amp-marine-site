@@ -1,0 +1,144 @@
+import { motion } from "framer-motion";
+import { Phone, Mail, ArrowRight } from "lucide-react";
+
+export default function AmpMarineWebsite() {
+  const services = [
+    {
+      title: "Marine Electrical Diagnostics",
+      description:
+        "Comprehensive troubleshooting for intermittent faults, charging issues, battery banks, and onboard electrical systems.",
+    },
+    {
+      title: "Electronics Installation",
+      description:
+        "Professional installation of chartplotters, radar, autopilots, sonar, VHF, AIS, and integrated helm electronics.",
+    },
+    {
+      title: "Lithium & Charging Upgrades",
+      description:
+        "Modern battery, inverter, solar, and charging system upgrades designed for reliability, safety, and performance.",
+    },
+    {
+      title: "Custom Rewires & Refits",
+      description:
+        "Clean, labeled, serviceable wiring solutions for new builds, refits, and high-end marine electrical modernization.",
+    },
+  ];
+
+  const projects = [
+    { src: "/projects/20241210_131645.jpg", title: "Helm Electronics Upgrade", desc: "Integrated display and switch panel." },
+    { src: "/projects/20250305_112042.jpg", title: "Fuse Layout", desc: "Clean fuse and bus system." },
+    { src: "/projects/20250305_130735.jpg", title: "Switch Panel", desc: "Backlit control panel." },
+    { src: "/projects/IMG_0722.jpg", title: "Before", desc: "Unorganized wiring." },
+    { src: "/projects/20240710_161402.jpg", title: "After", desc: "Clean installation." },
+    { src: "/projects/20241126_162015.jpg", title: "Water Maker", desc: "System integration." },
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#061c1c] text-white">
+
+      {/* HEADER (TOP LEFT LOGO OVER IMAGE) */}
+      <header className="absolute top-0 left-0 z-40 w-full">
+        <div className="flex items-center justify-between px-6 py-5">
+          <img src="/logo.png" className="h-12" />
+        </div>
+      </header>
+
+      {/* HERO WITH IMAGE */}
+      <section className="relative min-h-[75vh] flex items-end">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/preview.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+
+        <div className="relative z-10 max-w-3xl px-6 pb-16">
+          <p className="text-amber-300 uppercase tracking-widest text-sm">
+            Orange County / SoCal Marine Specialist
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl font-semibold mt-4">
+            Marine Electrical Systems Built for Reliability
+          </h1>
+
+          <p className="text-slate-200 mt-6">
+            Precision craftsmanship and high-end marine electrical solutions.
+          </p>
+
+          <div className="mt-8 flex gap-4 flex-wrap">
+            <a
+              href="tel:+19497775102"
+              className="bg-amber-400 text-black px-6 py-3 rounded-xl flex items-center gap-2"
+            >
+              <Phone size={16} /> Call Now
+            </a>
+
+            <a
+              href="mailto:info@ampmarine.net"
+              className="border border-white/20 px-6 py-3 rounded-xl flex items-center gap-2"
+            >
+              <Mail size={16} /> Email
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="px-6 py-20 max-w-6xl mx-auto">
+        <h2 className="text-3xl text-center mb-12">
+          Marine Electrical Services
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {services.map((s) => (
+            <div
+              key={s.title}
+              className="bg-[#0b2222] p-6 rounded-2xl border border-white/10"
+            >
+              <h3 className="text-amber-300 text-xl">{s.title}</h3>
+              <p className="text-slate-300 mt-3">{s.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="px-6 py-20 max-w-7xl mx-auto">
+        <h2 className="text-3xl text-center mb-12">
+          Recent Projects
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {projects.map((p) => (
+            <div key={p.src} className="rounded-xl overflow-hidden">
+              <img src={p.src} className="w-full h-60 object-cover" />
+              <div className="p-4">
+                <h3 className="text-amber-300">{p.title}</h3>
+                <p className="text-slate-400 text-sm mt-2">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="px-6 pb-20 text-center">
+        <h2 className="text-3xl mb-6">Contact</h2>
+
+        <a
+          href="mailto:info@ampmarine.net"
+          className="block text-amber-300 mb-3"
+        >
+          info@ampmarine.net
+        </a>
+
+        <a
+          href="tel:+19497775102"
+          className="inline-flex items-center gap-2 border border-white/20 px-5 py-3 rounded-xl"
+        >
+          <Phone size={16} /> Call Now
+        </a>
+      </section>
+    </div>
+  );
+}
