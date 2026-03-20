@@ -75,6 +75,10 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 18)
+- Hero image height: `h-[62vh]` → `h-[72vh]`
+- Confirmed no `rounded-*` on hero section, image wrapper div, or img
+
 ### 2026-03-20 (session 17)
 - Confirmed no `rounded-*` on hero section, image wrapper div, or img — already clean
 - Hero image height: `h-[55vh]` → `h-[62vh]`

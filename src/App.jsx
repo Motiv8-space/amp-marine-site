@@ -40,6 +40,7 @@ return (
         animate={{ opacity: 0 }}
         transition={{ duration: 1.2, delay: 2.1, ease: "easeInOut" }}
         className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#061c1c]"
+        style={{ backgroundImage: "url('/preview.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.92, y: 18 }}
@@ -77,63 +78,29 @@ return (
         </div>
       </header>
 
-      <section className="relative w-full">
-        {/* Image block with overlay, bolt glow, and bridging CTA buttons */}
-        <div className="relative w-full overflow-hidden">
-          <img
-            src="/preview.jpg"
-            alt="Amp Marine electrical work"
-            className="w-full h-[72vh] object-cover object-top block"
-          />
-          {/* Subtle dark overlay */}
-          <div className="absolute inset-0 bg-black/20" />
+      <section className="relative min-h-[60vh] sm:min-h-[68vh]">
+        {/* Background image */}
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/preview.jpg')" }} />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/35" />
 
-          {/* Bolt glow — outer */}
-          <motion.div
-            className="pointer-events-none absolute left-[28%] top-[12%] h-32 w-32 blur-3xl"
-            style={{ background: "radial-gradient(circle, rgba(56,189,248,0.7), transparent 70%)" }}
-            animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.2, 0.9] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          />
-          {/* Bolt glow — inner */}
-          <motion.div
-            className="pointer-events-none absolute left-[28.5%] top-[12%] h-16 w-16 blur-xl"
-            style={{ background: "radial-gradient(circle, rgba(125,211,252,0.9), transparent 70%)" }}
-            animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.15, 0.95] }}
-            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          />
-
-        </div>
-
-        {/* CTA buttons — outside overflow-hidden, negative margin creates image overlap */}
+        {/* Bolt glow — outer */}
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="relative z-10 flex flex-col items-center justify-center gap-3 px-6 -mt-6 sm:flex-row"
-        >
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-amber-300 to-amber-500 px-6 py-3 text-sm font-medium text-black shadow-lg transition hover:scale-[1.02]"
-          >
-            Request Consultation <ArrowRight className="h-4 w-4" />
-          </a>
-          <a
-            href="tel:+1-949-777-5102"
-            className="inline-flex items-center gap-2 rounded-2xl border border-amber-400/40 bg-[#061c1c]/80 px-6 py-3 text-sm font-medium text-amber-200 backdrop-blur-sm transition hover:bg-white/10"
-          >
-            <Phone className="h-4 w-4" /> Tap to Call
-          </a>
-          <a
-            href="mailto:info@ampmarine.net"
-            className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-[#061c1c]/80 px-6 py-3 text-sm font-medium text-slate-200 backdrop-blur-sm transition hover:bg-white/10"
-          >
-            <Mail className="h-4 w-4" /> Email Us
-          </a>
-        </motion.div>
+          className="pointer-events-none absolute left-[17%] top-[22%] h-32 w-32 blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(56,189,248,0.7), transparent 70%)" }}
+          animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.2, 0.9] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+        />
+        {/* Bolt glow — inner */}
+        <motion.div
+          className="pointer-events-none absolute left-[17.5%] top-[22.5%] h-16 w-16 blur-xl"
+          style={{ background: "radial-gradient(circle, rgba(125,211,252,0.9), transparent 70%)" }}
+          animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.15, 0.95] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+        />
 
-        {/* Text block below */}
-        <div className="mx-auto max-w-6xl px-6 pb-20 pt-10 text-center">
+        {/* Content overlaid on background */}
+        <div className="relative mx-auto max-w-6xl px-6 py-24 text-center sm:py-28">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -160,6 +127,32 @@ return (
           >
             Precision craftsmanship, high-end electronics integration, and uncompromising reliability.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-amber-300 to-amber-500 px-6 py-3 text-sm font-medium text-black shadow-lg transition hover:scale-[1.02]"
+            >
+              Request Consultation <ArrowRight className="h-4 w-4" />
+            </a>
+            <a
+              href="tel:+1-949-777-5102"
+              className="inline-flex items-center gap-2 rounded-2xl border border-amber-400/40 px-6 py-3 text-sm font-medium text-amber-200 transition hover:bg-white/5"
+            >
+              <Phone className="h-4 w-4" /> Tap to Call
+            </a>
+            <a
+              href="mailto:info@ampmarine.net"
+              className="inline-flex items-center gap-2 rounded-2xl border border-white/10 px-6 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/5"
+            >
+              <Mail className="h-4 w-4" /> Email Us
+            </a>
+          </motion.div>
         </div>
       </section>
 
