@@ -75,6 +75,10 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-19 (session 13)
+- Added `margin: 0; padding: 0;` to the `html` rule in index.css
+- Tailwind base: uses `@import "tailwindcss"` (v4 syntax) which includes preflight — no separate `@tailwind base` directive needed
+
 ### 2026-03-19 (session 12)
 - Splash screen: removed `backgroundImage: preview.jpg` style (was causing white-edged card look), changed bg from `#041616` to `#061c1c` to match site background, kept `fixed inset-0 z-50`
 - Navbar logo: no logo.svg exists — replaced `<img>` with `"Amp Marine"` text styled `font-semibold tracking-wide text-amber-300 hover:text-white`
