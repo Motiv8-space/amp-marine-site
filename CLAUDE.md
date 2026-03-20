@@ -75,6 +75,11 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-19 (session 11)
+- Added `*, *::before, *::after { box-sizing: border-box }` to index.css
+- Body rule already had `margin: 0; padding: 0; overflow-x: hidden` — confirmed no changes needed there
+- Navbar logo link: changed from `href="https://www.ampmarine.net"` (external) to `href="tel:+1-949-777-5102"` (call); removed `target="_blank"` and `rel="noreferrer"`
+
 ### 2026-03-19 (session 10)
 - `index.html`: confirmed bare `<div id="root">` — no wrapper padding
 - `index.css` body rule: added `padding: 0` and `overflow-x: hidden`

@@ -39,8 +39,7 @@ return (
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ duration: 1.2, delay: 2.1, ease: "easeInOut" }}
-        className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#041616]"
-        style={{ backgroundImage: "url('/preview.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+        className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#061c1c]"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.92, y: 18 }}
@@ -71,8 +70,8 @@ return (
           <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
             <a href="#services" className="transition hover:text-white">Services</a>
             <a href="#contact" className="transition hover:text-white">Contact</a>
-            <a href="tel:+1-949-777-5102">
-              <img src="/logo.png" alt="Amp Marine" className="h-8 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
+            <a href="tel:+1-949-777-5102" className="font-semibold tracking-wide text-amber-300 transition hover:text-white">
+              Amp Marine
             </a>
           </div>
         </div>
