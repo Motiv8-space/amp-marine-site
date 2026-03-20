@@ -42,29 +42,7 @@ return (
         transition={{ duration: 1.2, delay: 2.1, ease: "easeInOut" }}
         className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#061c1c]"
         style={{ backgroundImage: "url('/preview.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92, y: 18 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: "easeOut" }}
-          className="relative text-center"
-        >
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0.7 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 0.35 }}
-            className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-amber-300/60 to-transparent"
-          />
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.85 }}
-            className="mt-6 text-xs uppercase tracking-[0.45em] text-amber-200/85 sm:text-sm"
-          >
-            Orange County / SoCal Marine Specialist
-          </motion.p>
-        </motion.div>
-      </motion.div>
+      />
 
       {/* Navbar */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#061c1c]/80 backdrop-blur-xl">
