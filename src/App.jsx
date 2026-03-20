@@ -68,7 +68,7 @@ return (
           <img
             src="/preview.jpg"
             alt="Amp Marine electrical work"
-            className="w-full h-[72vh] object-cover object-center block"
+            className="w-full h-[50vh] sm:h-[65vh] lg:h-[72vh] object-cover object-center block"
           />
           <div className="absolute inset-0 bg-black/20" />
 
