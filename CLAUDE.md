@@ -75,6 +75,11 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-19 (session 16)
+- Discovered `public/preview.jpg` (1200×800) had baked-in white/light borders: 29px left, 120px top, 38px right, 112px bottom (edge pixels ~RGB 241,241,241)
+- Auto-cropped borders using PIL with threshold=220; new size 1133×568
+- This was the root cause of white side strips in the hero image
+
 ### 2026-03-19 (session 15)
 - Gallery cards: confirmed no `whileHover` on `motion.div` wrappers — hover is CSS-only (`group-hover:scale-110` on `<img>`)
 - System Plan card (`mikes-boat-wiring-final.png`): added `brightness-110 contrast-125` via conditional className using `p.src.includes('mikes-boat')`

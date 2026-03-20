@@ -83,21 +83,21 @@ return (
           <img
             src="/preview.jpg"
             alt="Amp Marine electrical work"
-            className="w-full h-[55vh] object-cover object-top block"
+            className="w-full h-[62vh] object-cover object-top block"
           />
           {/* Subtle dark overlay */}
           <div className="absolute inset-0 bg-black/20" />
 
           {/* Bolt glow — outer */}
           <motion.div
-            className="pointer-events-none absolute left-[28%] top-[8%] h-32 w-32 blur-3xl"
+            className="pointer-events-none absolute left-[28%] top-[12%] h-32 w-32 blur-3xl"
             style={{ background: "radial-gradient(circle, rgba(56,189,248,0.7), transparent 70%)" }}
             animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.2, 0.9] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
           />
           {/* Bolt glow — inner */}
           <motion.div
-            className="pointer-events-none absolute left-[28.5%] top-[8%] h-16 w-16 blur-xl"
+            className="pointer-events-none absolute left-[28.5%] top-[12%] h-16 w-16 blur-xl"
             style={{ background: "radial-gradient(circle, rgba(125,211,252,0.9), transparent 70%)" }}
             animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.15, 0.95] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
