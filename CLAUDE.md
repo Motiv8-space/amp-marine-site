@@ -75,6 +75,10 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-19 (session 14)
+- Added `overflow-y: scroll` and `scrollbar-gutter: stable` to `html` rule — fixes white side strips caused by scrollbar appearing/disappearing
+- Hero image: added `object-top` so the top of the landscape image shows correctly instead of being cropped from center
+
 ### 2026-03-19 (session 13)
 - Added `margin: 0; padding: 0;` to the `html` rule in index.css
 - Tailwind base: uses `@import "tailwindcss"` (v4 syntax) which includes preflight — no separate `@tailwind base` directive needed

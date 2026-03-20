@@ -214,7 +214,10 @@ return (
               transition={{ duration: 0.6, delay: i * 0.05 }}
               className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b2222]"
             >
-              <img src={p.src} className="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img
+                src={p.src}
+                className={`h-56 w-full object-cover transition-transform duration-300 group-hover:scale-110${p.src.includes('mikes-boat') ? ' brightness-110 contrast-125' : ''}`}
+              />
               <div className="p-5">
                 <h3 className="text-lg text-amber-200 font-semibold">{p.title}</h3>
               </div>
