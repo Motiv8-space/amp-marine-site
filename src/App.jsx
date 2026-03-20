@@ -71,25 +71,20 @@ return (
           <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
             <a href="#services" className="transition hover:text-white">Services</a>
             <a href="#contact" className="transition hover:text-white">Contact</a>
-            <a
-              href="https://www.ampmarine.net"
-              target="_blank"
-              rel="noreferrer"
-              className="text-amber-300 transition hover:text-white"
-            >
-              ampmarine.net
+            <a href="https://www.ampmarine.net" target="_blank" rel="noreferrer">
+              <img src="/logo.png" alt="Amp Marine" className="h-8 w-auto" />
             </a>
           </div>
         </div>
       </header>
 
-      <section className="relative">
+      <section className="relative w-full">
         {/* Image block with overlay, bolt glow, and bridging CTA buttons */}
-        <div className="relative overflow-hidden">
+        <div className="relative w-full overflow-hidden">
           <img
             src="/preview.jpg"
             alt="Amp Marine electrical work"
-            className="w-full h-[55vh] object-cover"
+            className="w-full h-[55vh] object-cover block"
           />
           {/* Subtle dark overlay */}
           <div className="absolute inset-0 bg-black/20" />
