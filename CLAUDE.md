@@ -75,6 +75,12 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 30)
+- Hero `<img>`: `h-[50vh] sm:h-[65vh] lg:h-[72vh] object-cover object-center` → `h-[55vw] sm:h-[60vh] lg:h-[72vh] object-cover object-[center_20%]`
+  - `h-[55vw]` on mobile: height scales with viewport width so full image width always shows without cropping
+  - `object-[center_20%]`: focuses on upper portion of image where the logo lives
+  - `sm:h-[60vh]` / `lg:h-[72vh]`: desktop breakpoints unchanged in feel
+
 ### 2026-03-20 (session 29)
 - Reverted last 2 commits (sessions 27 & 28) via `git revert HEAD~2..HEAD --no-edit` — hero img is back to `h-[50vh] sm:h-[65vh] lg:h-[72vh] object-cover object-center` with bolt glow at `left-[28%] top-[14%]` (outer) / `left-[28.5%] top-[14.5%]` (inner), no `hidden sm:block` on glows
 
