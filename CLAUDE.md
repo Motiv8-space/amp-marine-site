@@ -75,6 +75,27 @@ Two stacked `motion.div` overlays in the hero `<section>`:
 - Created `public/projects/` and copied 5 curated images
 - Created CLAUDE.md
 
+### 2026-03-20 (session 29)
+- Reverted last 2 commits (sessions 27 & 28) via `git revert HEAD~2..HEAD --no-edit` — hero img is back to `h-[50vh] sm:h-[65vh] lg:h-[72vh] object-cover object-center` with bolt glow at `left-[28%] top-[14%]` (outer) / `left-[28.5%] top-[14.5%]` (inner), no `hidden sm:block` on glows
+
+### 2026-03-20 (session 28)
+- Hero `<img>`: `h-[40vh]` → `h-[45vh]` on mobile (slightly taller), `object-cover` → `object-contain` on mobile only (`sm:object-cover` retains cover on tablet+), added `bg-black` — on mobile shows full image without cropping, black fills letterbox areas; tablet/desktop unchanged
+
+### 2026-03-20 (session 27)
+- Hero `<img>` height: `h-[50vh] sm:h-[65vh] lg:h-[72vh]` → `h-[40vh] sm:h-[60vh] lg:h-[72vh]` — shorter on mobile (40vh) so image doesn't dominate small screens
+- Hero `<img>`: `object-center` → `object-top` — logo shows from top instead of centering into mid-image
+- Bolt glow: outer `left-[28%] top-[14%]` → `left-[27%] top-[17%]` + added `hidden sm:block` — hides glow on mobile where percentage positioning doesn't align
+- Bolt glow: inner `left-[28.5%] top-[14.5%]` → `left-[27.5%] top-[17.5%]` + added `hidden sm:block` — same mobile hide pattern
+
+### 2026-03-20 (session 26)
+- Hero `<img>` height: changed from `h-[72vh]` to `h-[50vh] sm:h-[65vh] lg:h-[72vh]` — responsive breakpoints reduce image height on mobile (50vh) and tablet (65vh), full size on desktop (72vh)
+- Splash screen `motion.div`: already had `pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-[#061c1c]` — no change needed
+
+### 2026-03-20 (session 25)
+- Splash: `backgroundSize: "contain"`, `backgroundRepeat: "no-repeat"`, `backgroundColor: "#061c1c"` — shows full image with dark sides
+- Outermost div: removed `w-screen` (caused horizontal overflow on resize) → `min-h-screen overflow-x-hidden`
+- Bolt glow: outer `left-[28%] top-[14%]`, inner `left-[28.5%] top-[14.5%]`
+
 ### 2026-03-20 (session 24)
 - Bolt glow: outer `left-[27%] top-[17%]`, inner `left-[27.5%] top-[17.5%]`
 
